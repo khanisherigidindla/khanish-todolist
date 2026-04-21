@@ -1,0 +1,105 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 224 15% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 15% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 15% 12%;
+    --primary: 250 84% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 93%;
+    --secondary-foreground: 224 15% 30%;
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 10% 50%;
+    --accent: 250 84% 96%;
+    --accent-foreground: 250 84% 40%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 14% 89%;
+    --input: 220 14% 89%;
+    --ring: 250 84% 60%;
+    --radius: 0.75rem;
+
+    --column-pending: 38 92% 96%;
+    --column-inprogress: 210 100% 96%;
+    --column-completed: 142 76% 96%;
+
+    --tag-bg: 250 84% 95%;
+    --tag-text: 250 84% 45%;
+  }
+
+  .dark {
+    --background: 224 20% 9%;
+    --foreground: 220 14% 93%;
+    --card: 224 18% 13%;
+    --card-foreground: 220 14% 93%;
+    --popover: 224 18% 13%;
+    --popover-foreground: 220 14% 93%;
+    --primary: 250 84% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 224 15% 18%;
+    --secondary-foreground: 220 14% 75%;
+    --muted: 224 15% 17%;
+    --muted-foreground: 220 10% 55%;
+    --accent: 250 50% 20%;
+    --accent-foreground: 250 84% 75%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 224 15% 20%;
+    --input: 224 15% 20%;
+    --ring: 250 84% 65%;
+
+    --column-pending: 38 30% 13%;
+    --column-inprogress: 210 30% 13%;
+    --column-completed: 142 20% 12%;
+
+    --tag-bg: 250 40% 20%;
+    --tag-text: 250 84% 70%;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-size: 28px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-inter antialiased;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/40;
+  }
+}
