@@ -161,10 +161,10 @@ export default function Header() {
           {/* Theme */}
           <button
             onClick={toggleTheme}
-            className="p-6 rounded-3xl hover:bg-muted transition-all shadow-sm hover:shadow-md text-2xl"
+            className="p-8 rounded-3xl hover:bg-muted transition-all shadow-sm hover:shadow-md text-3xl h-14 w-14 flex items-center justify-center"
             title="Toggle theme"
           >
-            {theme === 'dark' ? <Sun size={22} className="text-muted-foreground" /> : <Moon size={22} className="text-muted-foreground" />}
+            {theme === 'dark' ? '☀️' : '🌙'}
           </button>
 
           {/* Add Task */}

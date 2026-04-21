@@ -129,7 +129,7 @@ export default function TaskCard({ task, onEdit, dragHandleProps, isDragging }) 
 
         <button
           onClick={handleDelete}
-          className="opacity-0 group-hover:opacity-100 p-1 rounded-md hover:bg-destructive/10 hover:text-destructive text-muted-foreground transition-all duration-150"
+className="opacity-0 group-hover:opacity-100 p-2 rounded-lg hover:bg-destructive/10 hover:text-destructive text-muted-foreground transition-all duration-150 h-10 w-10 flex items-center justify-center"
         >
           <Trash2 size={13} />
         </button>
